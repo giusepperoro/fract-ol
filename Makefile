@@ -6,14 +6,22 @@ CFLAGS		= -Wall -Wextra -Werror -MMD
 
 HEADER		= includes/fractol.h
 
-SRCS		= 	srcs/main.c
-				srcs/mlxfunctions.c
+SRCS		= 	srcs/main.c \
+				srcs/utils.c \
+				srcs/error.c \
+				srcs/burning_ship.c \
+				srcs/drop.c \
+				srcs/julia.c \
+				srcs/lambada.c \
+				srcs/mandelbrot.c \
+				srcs/spider.c \
+				srcs/cameramiving.c \
 
 OBJS		= $(SRCS: .c=.o)
 
 $(NAME):		$(OBJS)
-				cd minilibx && $(MAKE) && mv libmlx.dylib ../libmlx.dylib
-				$(CC) $(CFLAGS) -I $(HEADERS) $(OBJS) libmlx.dylib -o $(NAME)
+				cd minilibx && $(MAKE) && mv libmlx.a ../libmlx.a
+				$(CC) $(CFLAGS) -I $(HEADERS) $(OBJS) libmlx.a -o $(NAME)
 
 all:			$(NAME)
 
@@ -28,9 +36,11 @@ clean:
 
 fclean:			clean
 				cd minilibx && $(MAKE) clean
-				$(RM) libmlx.dylib
+				$(RM) libmlx.a
 				$(RM) $(NAME)
 
 re:				fclean all
 
 .PHONY:			all clean fclean re
+
+.SILENT:
