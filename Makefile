@@ -13,12 +13,12 @@ OBJS		= $(SRCS: .c=.o)
 
 $(NAME):		$(OBJS)
 				cd minilibx && $(MAKE) && mv libmlx.dylib ../libmlx.dylib
-				$(CC) $(CPPFLAGS) -I $(HEADERS) $(OBJS) libmlx.dylib -o $(NAME)
+				$(CC) $(CFLAGS) -I $(HEADERS) $(OBJS) libmlx.dylib -o $(NAME)
 
 all:			$(NAME)
 
 .c.o:
-				$(CC) $(CPPFLAGS) -I $(HEADERS) -o $@ -c $<
+				$(CC) $(CFLAGS) -I $(HEADERS) -o $@ -c $<
 
 $(OBJS):		$(HEADERS)
 
