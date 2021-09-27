@@ -37,7 +37,7 @@ clean:
 fclean:			clean
 				cd minilibx && $(MAKE) clean
 				$(RM) libmlx.a
-				$(RM) $(NAME)
+				$(RM) $(OBJS)
 
 re:				fclean all
 
