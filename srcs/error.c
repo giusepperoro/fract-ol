@@ -1,4 +1,4 @@
-#include "fractol.h"
+#include "../includes/fractol.h"
 
 int	check_arg(int argc, char *str)
 {
@@ -9,10 +9,9 @@ int	check_arg(int argc, char *str)
 			&& ft_strcmp(str, "lambda")
 			&& ft_strcmp(str, "drop")))
 	{
-		ft_putstr_fd("usage: ./fractol fractol_names", STDERR_FILENO);
-		ft_putstr_fd("available names:", STDERR_FILENO);
-		ft_putstr_fd("julia, mandelbrot, spider, burning_ship, drop, lambda",
-			STDERR_FILENO);
+		printf("usage: ./fractol fractol_names");
+		printf("available names:");
+		printf("julia, mandelbrot, spider, burning_ship, drop, lambda");
 		return (1);
 	}
 	return (0);
@@ -20,6 +19,6 @@ int	check_arg(int argc, char *str)
 
 int	return_er(char *str)
 {
-	ft_putstr_fd(str, STDERR_FILENO);
-	return (EXIT_FAILURE);
+	printf("%s\n",str);
+	exit (1);
 }

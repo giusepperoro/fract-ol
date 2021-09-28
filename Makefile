@@ -1,46 +1,42 @@
-NAME		= fractol
-CC			= gcc
-RM			= rm -f
+NAME = fractol
 
-CFLAGS		= -Wall -Wextra -Werror -MMD
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra
+MLX = -Imlx -lmlx -framework OpenGL -framework AppKit
 
-HEADER		= includes/fractol.h
+SRC		=		main.c \
+				utils.c \
+				utils2.c \
+				error.c \
+				burning_ship.c \
+				drop.c \
+				julia.c \
+				lambada.c \
+				mandelbrot.c \
+				spider.c \
+				cameramoving.c \
+				graphica.c \
 
-SRCS		= 	srcs/main.c \
-				srcs/utils.c \
-				srcs/error.c \
-				srcs/burning_ship.c \
-				srcs/drop.c \
-				srcs/julia.c \
-				srcs/lambada.c \
-				srcs/mandelbrot.c \
-				srcs/spider.c \
-				srcs/cameramiving.c \
+OB = $(SRC:.c=.o)
 
-OBJS		= $(SRCS: .c=.o)
+MLX_DIR = minilibx
+SRCS_DIR = srcs
 
-$(NAME):		$(OBJS)
-				cd minilibx && $(MAKE) && mv libmlx.a ../libmlx.a
-				$(CC) $(CFLAGS) -I $(HEADERS) $(OBJS) libmlx.a -o $(NAME)
+SRCS        = $(addprefix $(SRCS_DIR)/, $(SRC))
+OBJS        = $(addprefix $(SRCS_DIR)/, $(OB))
 
-all:			$(NAME)
+INCLUDE = -I includes
 
-.c.o:
-				$(CC) $(CFLAGS) -I $(HEADERS) -o $@ -c $<
+all : $(NAME)
 
-$(OBJS):		$(HEADERS)
+$(NAME) : $(OBJS)
+	make -C $(MLX_DIR)
+	$(CC) $(CFLAGS) $(INCLUDE) $(OBJS) $(MLX) -o $(NAME)
 
-clean:
-				$(RM) $(OBJS)
-				$(RM) $(OBJS:.o=.d)
+clean :
+	rm -f $(OBJS)
 
-fclean:			clean
-				cd minilibx && $(MAKE) clean
-				$(RM) libmlx.a
-				$(RM) $(OBJS)
+fclean : clean
+	rm -f $(NAME)
 
-re:				fclean all
-
-.PHONY:			all clean fclean re
-
-.SILENT:
+re : fclean all

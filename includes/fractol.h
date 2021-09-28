@@ -1,7 +1,7 @@
 #ifndef FRACTOL_H
 # define FRACTOL_H
 
-# include "../mylib/libft.h"
+# include "../libft/libft.h"
 # include "../minilibx/mlx.h"
 # include <math.h>
 # include <stdio.h>
@@ -9,6 +9,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <pthread.h>
+# include <string.h>
 
 enum	e_key {
 		WIN_WIDTH = 1280,
@@ -85,13 +86,19 @@ typedef struct	s_mlx
 	char		name;
 }				t_mlx;
 
-int	main(int argc, char **argv);
-int	check_arg(int argc, char *argv);
-int	return_er(char *str);
+int		main(int argc, char **argv);
+int		check_arg(int argc, char *argv);
+int		return_er(char *str);
+int		ft_strcmp(const char *s1, const char *s2);
 void	*argv_commannds(void *inc);
 void	launch(t_mlx *mlx);
 int		close_window(int *argc);
 void	move_arrows(int key, t_mlx *mlx);
+int		ft_pixel_color(int iter, int max, int scheme);
+int		ft_color_calc(int iter, int max, int scheme);
+t_image	*ft_delimage(t_mlx *mlx, t_image *img);
+void	ft_image_set_pixel(t_image *image, int x, int y, int color);
+t_image	*ft_new_image(t_mlx *mlx);
 void	hook(t_mlx *mlx, int *argc);
 void	*memandmalloc(size_t size);
 void	*burning_ship(void *inc);
@@ -100,5 +107,6 @@ void	*julia(void *inc);
 void	*lambda(void *inc);
 void	*mandelbrot(void *inc);
 void	*spider(void *inc);
+void	ft_memdel(void **ap);
 
 #endif

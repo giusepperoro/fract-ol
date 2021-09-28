@@ -1,4 +1,4 @@
-#include "fractol.h"
+#include "../includes/fractol.h"
 
 void	*memandmalloc(size_t size)
 {
@@ -7,7 +7,7 @@ void	*memandmalloc(size_t size)
 	res = malloc(size);
 	if (!res)
 		exit (EXIT_FAILURE);
-	ft_memset(res, 0, size);
+	memset(res, 0, size);
 	return (res);
 }
 
@@ -70,7 +70,7 @@ int	main(int argc, char **argv)
 	while (++i < argc - 1)
 	{
 		if (check_arg(argc, argv[i + 1]))
-			return (return_er("Error: memory allocation\n"));
+			return_er("Error: memory allocation\n");
 		mlx[i] = ft_init(argv[i + 1][0], init);
 		if (!mlx[i])
 			return (EXIT_FAILURE);
@@ -79,7 +79,7 @@ int	main(int argc, char **argv)
 		hook(mlx[i], &count);
 	}
 	if (i == 0)
-		return (return_er("Usage: fractol_names\n"));
+		return_er("Usage: fractol_names\n");
 	mlx_loop(init);
 	return (EXIT_SUCCESS);
 }

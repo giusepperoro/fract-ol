@@ -1,4 +1,4 @@
-#include "fractol.h"
+#include "../includes/fractol.h"
 
 int	close_window(int *argc)
 {
@@ -55,7 +55,7 @@ void	launch(t_mlx *mlx)
 		- WIN_HEIGHT / mlx->pthreads * mlx->pthreads;
 	threads = (pthread_t *)memandmalloc(sizeof(pthread_t) * mlx->pthreads);
 	data = (t_mlx *)memandmalloc(sizeof(t_mlx) * mlx->pthreads);
-	ft_bzero(mlx->image->data, WIN_WIDTH * WIN_HEIGHT * mlx->image->bitspp);
+	bzero(mlx->image->data, WIN_WIDTH * WIN_HEIGHT * mlx->image->bitspp);
 	i = -1;
 	while (++i < mlx->pthreads)
 	{
@@ -70,4 +70,15 @@ void	launch(t_mlx *mlx)
 	mlx_put_image_to_window(mlx->init, mlx->window, mlx->image->ptr, 0, 0);
 	free(threads);
 	free(data);
+}
+
+int		ft_strcmp(const char *s1, const char *s2)
+{
+	int		i;
+
+	i = -1;
+	while (s1[++i] != '\0' || s2[i] != '\0')
+		if (s1[i] != s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	return (0);
 }

@@ -1,4 +1,4 @@
-#include "fractol.h"
+#include "../includes/fractol.h"
 
 static int	mouse_down(int but, int x, int y, t_mlx *mlx)
 {

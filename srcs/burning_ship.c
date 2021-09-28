@@ -1,4 +1,4 @@
-#include "fractol.h"
+#include "../includes/fractol.h"
 
 static int	ft_change_num(t_fractol *f)
 {
