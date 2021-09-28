@@ -6,13 +6,13 @@
 /*   By: kdoyle <kdoyle@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 09:59:37 by kdoyle            #+#    #+#             */
-/*   Updated: 2020/11/07 11:08:54 by kdoyle           ###   ########.fr       */
+/*   Updated: 2021/09/28 19:53:46 by kdoyle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		*ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
 	char	*bo;
 	size_t	i;

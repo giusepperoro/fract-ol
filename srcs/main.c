@@ -23,7 +23,7 @@ static t_mlx	*ft_init(char frname, void *init)
 	mlx->image = ft_new_image(mlx);
 	if ((mlx->window == NULL) || (mlx->image == NULL))
 		return (NULL);
-	mlx->pthreads = 8;
+	mlx->pthreads = 20;
 	mlx->mouse.x = 0;
 	mlx->mouse.y = 0;
 	mlx->cam.offsetx = 0;

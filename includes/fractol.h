@@ -12,27 +12,27 @@
 # include <string.h>
 
 enum	e_key {
-		WIN_WIDTH = 1280,
-		WIN_HEIGHT = 640,
-		KEY_ESC = 53,
-		KEY_SPACE = 49,
-		KEY_W = 13,
-		KEY_A = 0,
-		KEY_S = 1,
-		KEY_D = 2,
-		KEY_Q = 12,
-		KEY_E = 14,
-		HEY_H = 4,
-		KEY_G = 5,
-		KEY_Z = 6,
-		KEY_X = 7,
-		KEY_UP = 126,
-		KEY_DOWN = 125,
-		KEY_LEFT = 123,
-		KEY_RIGHT = 124
+	WIN_WIDTH = 1280,
+	WIN_HEIGHT = 640,
+	KEY_ESC = 53,
+	KEY_SPACE = 49,
+	KEY_W = 13,
+	KEY_A = 0,
+	KEY_S = 1,
+	KEY_D = 2,
+	KEY_Q = 12,
+	KEY_E = 14,
+	HEY_H = 4,
+	KEY_G = 5,
+	KEY_Z = 6,
+	KEY_X = 7,
+	KEY_UP = 126,
+	KEY_DOWN = 125,
+	KEY_LEFT = 123,
+	KEY_RIGHT = 124
 };
 
-typedef struct	s_image
+typedef struct s_image
 {
 	void		*ptr;
 	char		*data;
@@ -41,7 +41,7 @@ typedef struct	s_image
 	int			endian;
 }				t_image;
 
-typedef struct	s_cam
+typedef struct s_cam
 {
 	double		offsetx;
 	double		offsety;
@@ -50,7 +50,7 @@ typedef struct	s_cam
 	int			zoomy;
 }				t_cam;
 
-typedef struct	s_mouse
+typedef struct s_mouse
 {
 	int			x;
 	int			y;
@@ -60,7 +60,7 @@ typedef struct	s_mouse
 	int			flag;
 }				t_mouse;
 
-typedef	struct	s_fractol
+typedef struct s_fractol
 {
 	double		c_im;
 	double		c_re;
@@ -72,7 +72,7 @@ typedef	struct	s_fractol
 	int			color;
 }				t_fractol;
 
-typedef struct	s_mlx
+typedef struct s_mlx
 {
 	void		*init;
 	void		*window;

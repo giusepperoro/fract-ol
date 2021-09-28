@@ -6,7 +6,7 @@
 /*   By: kdoyle <kdoyle@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 10:22:38 by kdoyle            #+#    #+#             */
-/*   Updated: 2020/11/24 22:30:34 by kdoyle           ###   ########.fr       */
+/*   Updated: 2021/09/28 19:28:24 by kdoyle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
@@ -41,7 +41,7 @@ int					ft_isalnum(int c);
 int					ft_atoi(const char *str);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 char				*ft_strnstr(const char *haystack, const char *needle,
-															size_t loc);
+						size_t loc);
 char				*ft_strrchr(const char *s, int c);
 void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);

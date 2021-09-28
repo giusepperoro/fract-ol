@@ -6,13 +6,13 @@
 /*   By: kdoyle <kdoyle@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 22:43:50 by kdoyle            #+#    #+#             */
-/*   Updated: 2020/11/11 12:27:03 by kdoyle           ###   ########.fr       */
+/*   Updated: 2021/09/28 19:48:29 by kdoyle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*buff;
 	size_t	i;

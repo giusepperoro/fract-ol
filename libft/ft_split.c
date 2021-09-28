@@ -6,7 +6,7 @@
 /*   By: kdoyle <kdoyle@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 14:54:55 by kdoyle            #+#    #+#             */
-/*   Updated: 2020/11/23 21:53:19 by kdoyle           ###   ########.fr       */
+/*   Updated: 2021/09/28 19:49:15 by kdoyle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static	size_t	amountwords(char const *smm, char c)
 	return (count);
 }
 
-static char		**freemm(char **penmmforfree)
+static char	**freemm(char **penmmforfree)
 {
 	size_t		forfree;
 
@@ -39,7 +39,7 @@ static char		**freemm(char **penmmforfree)
 	return (NULL);
 }
 
-static void		penetratemm(char **penmm, char c, size_t amm, char const *smm)
+static void	penetratemm(char **penmm, char c, size_t amm, char const *smm)
 {
 	size_t		i;
 	size_t		j;
@@ -63,7 +63,7 @@ static void		penetratemm(char **penmm, char c, size_t amm, char const *smm)
 	penmm[ipenmm] = NULL;
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	size_t		am;
 	char		**mm;

@@ -6,13 +6,13 @@
 /*   By: kdoyle <kdoyle@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 04:18:31 by kdoyle            #+#    #+#             */
-/*   Updated: 2020/11/17 22:26:05 by kdoyle           ###   ########.fr       */
+/*   Updated: 2021/09/28 19:48:22 by kdoyle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 	size_t	c;

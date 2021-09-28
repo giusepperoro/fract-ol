@@ -6,11 +6,11 @@
 /*   By: kdoyle <kdoyle@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 15:22:55 by kdoyle            #+#    #+#             */
-/*   Updated: 2020/11/07 06:27:55 by kdoyle           ###   ########.fr       */
+/*   Updated: 2021/09/28 19:42:29 by kdoyle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		return (c + 32);

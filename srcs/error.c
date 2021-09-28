@@ -19,6 +19,6 @@ int	check_arg(int argc, char *str)
 
 int	return_er(char *str)
 {
-	printf("%s\n",str);
+	printf("%s\n", str);
 	exit (1);
 }

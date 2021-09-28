@@ -26,7 +26,7 @@ static void	count_point(int x, int y, t_fractol f, t_mlx *mlx)
 			break ;
 	if (i < f.iter - 1)
 		ft_image_set_pixel(mlx->image, x, y, ft_pixel_color(i, f.iter,
-					f.color));
+				f.color));
 }
 
 void	*mandelbrot(void *inc)

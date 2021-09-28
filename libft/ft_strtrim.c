@@ -6,13 +6,13 @@
 /*   By: kdoyle <kdoyle@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/11 00:44:25 by kdoyle            #+#    #+#             */
-/*   Updated: 2020/11/21 19:53:07 by kdoyle           ###   ########.fr       */
+/*   Updated: 2021/09/28 19:45:45 by kdoyle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
 	size_t	j;

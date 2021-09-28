@@ -6,13 +6,13 @@
 /*   By: kdoyle <kdoyle@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 19:29:38 by kdoyle            #+#    #+#             */
-/*   Updated: 2020/11/10 22:42:37 by kdoyle           ###   ########.fr       */
+/*   Updated: 2021/09/28 19:53:50 by kdoyle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int					ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	unsigned int	num;
 	int				m;

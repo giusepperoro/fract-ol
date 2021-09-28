@@ -22,9 +22,11 @@ t_image	*ft_new_image(t_mlx *mlx)
 {
 	t_image		*img;
 
-	if ((img = memandmalloc(sizeof(t_image))) == NULL)
+	img = memandmalloc(sizeof(t_image));
+	if (img == NULL)
 		return (NULL);
-	if ((img->ptr = mlx_new_image(mlx->init, WIN_WIDTH, WIN_HEIGHT)) == NULL)
+	img->ptr = mlx_new_image(mlx->init, WIN_WIDTH, WIN_HEIGHT);
+	if (img->ptr == NULL)
 		return (ft_delimage(mlx, img));
 	img->data = mlx_get_data_addr(img->ptr, &img->bitspp, &img->string,
 			&img->endian);

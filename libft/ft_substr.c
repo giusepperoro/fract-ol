@@ -6,11 +6,19 @@
 /*   By: kdoyle <kdoyle@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 19:04:15 by kdoyle            #+#    #+#             */
-/*   Updated: 2020/11/22 20:19:09 by kdoyle           ###   ########.fr       */
+/*   Updated: 2021/09/28 19:45:34 by kdoyle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	ter(int i, int start, int len)
+{
+	if ((i - start) >= len)
+		return (len);
+	else
+		return (i - start);
+}
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -24,7 +32,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (0);
 	if (start >= i)
 		return (ft_strdup(""));
-	max = ((i - start >= len) ? len : (i - start));
+	max = ter(i, start, len);
 	buff = (char *)malloc(max + 1);
 	if (buff == NULL)
 		return (NULL);

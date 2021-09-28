@@ -6,13 +6,13 @@
 /*   By: kdoyle <kdoyle@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 15:48:30 by kdoyle            #+#    #+#             */
-/*   Updated: 2020/11/07 06:29:51 by kdoyle           ###   ########.fr       */
+/*   Updated: 2021/09/28 19:53:39 by kdoyle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	if ((c >= 32) && (c <= 126))
 		return (1);

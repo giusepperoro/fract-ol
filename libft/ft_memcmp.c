@@ -6,13 +6,13 @@
 /*   By: kdoyle <kdoyle@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 03:10:42 by kdoyle            #+#    #+#             */
-/*   Updated: 2020/11/07 06:57:20 by kdoyle           ###   ########.fr       */
+/*   Updated: 2021/09/28 19:49:30 by kdoyle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int					ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*so1;
 	unsigned char	*so2;

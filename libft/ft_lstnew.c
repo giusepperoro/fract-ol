@@ -6,13 +6,13 @@
 /*   By: kdoyle <kdoyle@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 21:34:14 by kdoyle            #+#    #+#             */
-/*   Updated: 2020/11/24 21:38:15 by kdoyle           ###   ########.fr       */
+/*   Updated: 2021/09/28 19:49:39 by kdoyle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list		*ft_lstnew(void *content)
+t_list	*ft_lstnew(void *content)
 {
 	t_list	*c;
 
