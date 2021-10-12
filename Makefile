@@ -28,13 +28,14 @@ $(NAME): $(OBJS)
 	cd mlx && $(MAKE) && cp libmlx.a ..
 	$(CC) $(CFLAGS) $(OBJS) $(FLAGS) libmlx.a -o $(NAME)
 
-all : $(NAME)
+all: $(NAME)
 
-clean :
+clean:
+	cd mlx && $(MAKE) clean
 	rm -f $(OBJS)
 	rm -f libmlx.a
 
-fclean : clean
+fclean: clean
 	rm -f $(NAME)
 
-re : fclean all
+re: fclean all
