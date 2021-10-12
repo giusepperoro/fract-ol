@@ -1,8 +1,8 @@
 NAME = fractol
 
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra
-MLX = -Imlx -lmlx -framework OpenGL -framework AppKit
+CFLAGS = -Wall -O2 -I ./includes/ -I ./mlx/
+FLAGS = -O2 -Lmlx -lmlx -framework OpenGL -framework AppKit
 
 SRC		=		main.c \
 				utils.c \
@@ -15,26 +15,24 @@ SRC		=		main.c \
 				mandelbrot.c \
 				spider.c \
 				cameramoving.c \
-				graphica.c \
+				graphica.c
 
 OB = $(SRC:.c=.o)
 
-MLX_DIR = minilibx
 SRCS_DIR = srcs
 
 SRCS        = $(addprefix $(SRCS_DIR)/, $(SRC))
 OBJS        = $(addprefix $(SRCS_DIR)/, $(OB))
 
-INCLUDE = -I includes
+$(NAME): $(OBJS)
+	cd mlx && $(MAKE) && cp libmlx.a ..
+	$(CC) $(CFLAGS) $(OBJS) $(FLAGS) libmlx.a -o $(NAME)
 
 all : $(NAME)
 
-$(NAME) : $(OBJS)
-	make -C $(MLX_DIR)
-	$(CC) $(CFLAGS) $(INCLUDE) $(OBJS) $(MLX) -o $(NAME)
-
 clean :
 	rm -f $(OBJS)
+	rm -f libmlx.a
 
 fclean : clean
 	rm -f $(NAME)
